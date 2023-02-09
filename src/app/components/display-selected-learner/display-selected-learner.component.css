@@ -1,0 +1,15 @@
+div {
+    margin-top: 85px;
+    width: 896px;
+    height: 354px;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}

@@ -10,7 +10,6 @@ import { LoterieButtonComponent } from './components/loterie-button/loterie-butt
 import { DisplaySelectedLearnerComponent } from './components/display-selected-learner/display-selected-learner.component';
 import { AbsenceSelectionListComponent } from './components/absence-selection-list/absence-selection-list.component';
 import { DisplayAbsenceGenderListsComponent } from './components/display-absence-gender-lists/display-absence-gender-lists.component';
-import { AddButtonComponent } from './components/add-button/add-button.component';
 import { LotteryComponent } from './pages/lottery/lottery.component';
 
 
@@ -24,7 +23,6 @@ import { LotteryComponent } from './pages/lottery/lottery.component';
     DisplaySelectedLearnerComponent,
     AbsenceSelectionListComponent,
     DisplayAbsenceGenderListsComponent,
-    AddButtonComponent,
     LotteryComponent,
   ],
   imports: [

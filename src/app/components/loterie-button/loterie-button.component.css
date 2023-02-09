@@ -10,6 +10,10 @@ button {
     margin-top: 187px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .container {
     display: flex;
     justify-content: center;

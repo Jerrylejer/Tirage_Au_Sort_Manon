@@ -1,0 +1,19 @@
+section {
+    display: flex;
+    height: 800px;
+    align-items: center;
+    width: 50vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 154px;
+    border-left: 2px solid rgb(220, 220, 220);
+    height: 60vh;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 700;
+}

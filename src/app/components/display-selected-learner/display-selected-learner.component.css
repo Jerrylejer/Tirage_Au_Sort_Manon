@@ -1,4 +1,4 @@
-div {
+.display {
     margin-top: 85px;
     width: 896px;
     height: 354px;
@@ -10,6 +10,29 @@ div {
 }
 
 section {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Le bouton */
+button {
+    width: 453px;
+    height: 75px;
+    background-color: #CE0033;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-top: 164px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button  {
     display: flex;
     justify-content: center;
 }

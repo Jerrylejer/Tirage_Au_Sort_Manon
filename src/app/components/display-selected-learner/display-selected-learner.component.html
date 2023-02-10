@@ -3,8 +3,27 @@
         <div class="button">
             <button (click)="displayNumber()">Sélectionner une personne</button>
         </div>
-        <div class="display">
-            <p>Personne n'a été sélectionner actuellement</p>
+        <div class="display" [ngSwitch]="text">
+            <p *ngSwitchCase="0" (click)="text = 0">Personne n'a été sélectionner actuellement</p>
+            <p *ngSwitchCase="1" (click)="text = 1"><strong>Anne</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="2" (click)="text = 2"><strong>Assa</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="3" (click)="text = 3"><strong>Christelle</strong> tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="4" (click)="text = 4"><strong>Clara</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="5" (click)="text = 5"><strong>Cynthia</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="6" (click)="text = 6"><strong>Christelle</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="7" (click)="text = 7"><strong>Diambéré</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="8" (click)="text = 8"><strong>Erdal</strong>, tu es le grand gagnant ! ✨</p>
+            <p *ngSwitchCase="9" (click)="text = 9"><strong>Fahed</strong>, tu es le grand gagnant ! ✨</p>
+            <p *ngSwitchCase="10" (click)="text = 10"><strong>Fama</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="11" (click)="text = 11"><strong>Hazar</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="12"(click)="text = 12"><strong>Jérôme</strong>, tu es la grand gagnant ! ✨</p>
+            <p *ngSwitchCase="13" (click)="text = 13"><strong>Jiyun</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="14" (click)="text = 14"><strong>Julie</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="15" (click)="text = 15"><strong>Kanzia</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="16" (click)="text = 16"><strong>Katia</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="17" (click)="text = 17"><strong>Lilianna</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="18" (click)="text = 18"><strong>Morgane</strong>, tu es la grande gagnante ! ✨</p>
+            <p *ngSwitchCase="19" (click)="text = 19"><strong>Thomas</strong>, tu es le grand gagnant ! ✨</p>
         </div>
     </div>
 </section>

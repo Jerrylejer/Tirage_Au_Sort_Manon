@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AbsenceComponent } from './pages/absence/absence.component';
 import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 import { FooterAppComponent } from './components/footer-app/footer-app.component';
-import { LoterieButtonComponent } from './components/loterie-button/loterie-button.component';
 import { DisplaySelectedLearnerComponent } from './components/display-selected-learner/display-selected-learner.component';
 import { AbsenceSelectionListComponent } from './components/absence-selection-list/absence-selection-list.component';
 import { DisplayAbsenceGenderListsComponent } from './components/display-absence-gender-lists/display-absence-gender-lists.component';
@@ -19,7 +18,6 @@ import { LotteryComponent } from './pages/lottery/lottery.component';
     AbsenceComponent,
     HeaderMenuComponent,
     FooterAppComponent,
-    LoterieButtonComponent,
     DisplaySelectedLearnerComponent,
     AbsenceSelectionListComponent,
     DisplayAbsenceGenderListsComponent,

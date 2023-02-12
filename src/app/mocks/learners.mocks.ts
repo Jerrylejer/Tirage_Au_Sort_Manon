@@ -19,7 +19,7 @@ export const LEARNERS: Learners[] = [
         id: 2,
         firstname: "Assa",
         isFemale: true,
-        isPresent: true,
+        isPresent: false,
         isElectedYet: false,
     },
     {

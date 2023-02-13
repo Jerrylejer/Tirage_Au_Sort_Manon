@@ -13,10 +13,10 @@ export class DisplaySelectedLearnerComponent {
   
   //* Seconde méthode adoptée suite problème pour contourner larépétition du RandomNumber dans méthode 1 (à la suite)
   // Valeur par défaut du switch
-  text: number = 0;
+  text: number = 20;
   // Tableau des chiffres correspondants aux différents ngSwitchCase
   switchCases: any[] = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18
   ];
   index: number = -1;
 
@@ -46,6 +46,7 @@ export class DisplaySelectedLearnerComponent {
 
     // Mise en place des conditions
     if (this.index == 17) {
+      this.text = 20;
       // Arrivé au dernier index du tableau, je lance la réinitialisation du mélange du tableau
       this.ngOnInit();
     }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LEARNERS, Learners } from 'src/app/mocks/learners.mocks';
 
 @Component({
   selector: 'app-absence-selection-list',
@@ -6,19 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./absence-selection-list.component.css'],
 })
 export class AbsenceSelectionListComponent {
-
-  selectionAbsent: string = "";
+  selectionAbsent: string = '';
   absents: string[] = [];
+  // Mon mock pour interpoler sur les prénoms
+  learnerMock: Learners[] = LEARNERS;
 
   // Récupération des valeurs sélectionnée dans la liste (change)
   onChangeEvent(event: any) {
-    // Je récupère bien la valeur de l'option sélectionnée dans le DOM
-    console.log(event.target.value);  
     // Je modifie ma propriété "selectionList"
     this.selectionAbsent = event.target.value;
+    // Je récupère bien la valeur de l'option sélectionnée dans le DOM
     console.log(this.selectionAbsent);
   }
-  
+
   // Au click du btn, j'ajoute la valeur retenue dans un tableau
   sendForListing() {
     // Je communique la nouvelle data et mets à jour le tableau "absents" des apprenants sélectionnés

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AbsenceSelectionListComponent } from '../absence-selection-list/absence-selection-list.component';
 
 @Component({
   selector: 'app-display-absence-gender-lists',

@@ -1,7 +1,7 @@
 <section>
-    <div class="container">
+    <form class="container">
         <p>Ajouter un.e absent.e</p>
-        <select name="apprenants" id="apprenants">
+        <select name="apprenants" id="apprenants" (change)="onChangeEvent($event)">
             <option value="">Sélectionner une personne</option>
             <option value="Anne">Anne</option>
             <option value="Assa">Assa</option>
@@ -10,7 +10,7 @@
             <option value="Cynthia">Cynthia</option>
             <option value="Diambéré">Diambéré</option>
             <option value="Erdal">Erdal</option>
-            <option value="Fahd">Fahd</option>
+            <option value="Fahed">Fahd</option>
             <option value="Fama">Fama</option>
             <option value="Hazar">Hazar</option>
             <option value="Jérôme">Jérôme</option>
@@ -22,6 +22,6 @@
             <option value="Morgane">Morgane</option>
             <option value="Thomas">Thomas</option>
         </select>
-        <button>Ajouter</button>
-    </div>
+        <button type="button" (click)="sendForListing()">Ajouter</button>
+    </form>
 </section>

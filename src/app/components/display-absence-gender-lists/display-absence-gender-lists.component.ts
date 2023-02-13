@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { SharedAbsentsService } from 'src/app/services/shared-absents.service';
 import { AbsenceSelectionListComponent } from '../absence-selection-list/absence-selection-list.component';
+
 
 @Component({
   selector: 'app-display-absence-gender-lists',
@@ -8,4 +10,8 @@ import { AbsenceSelectionListComponent } from '../absence-selection-list/absence
 })
 export class DisplayAbsenceGenderListsComponent {
 
+
+  deleteAbsent() {
+
+  }
 }

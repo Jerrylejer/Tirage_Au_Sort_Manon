@@ -3,9 +3,8 @@
         <p>Ajouter un.e absent.e</p>
         <select name="apprenants" id="apprenants" (change)="onChangeEvent($event)">
             <option value="">Sélectionner une personne</option>
-            <!-- Je boucle sur mon learner.mock.ts pour alimenter la liste -->
             <option value="{{learners.firstname}}" *ngFor="let learners of learnerMock">{{learners.firstname}}</option>
         </select>
-        <button type="button" (click)="sendForListing()">Ajouter</button>
+        <button type="submit" (click)="onSubmit()">Ajouter</button>
     </form>
 </section>

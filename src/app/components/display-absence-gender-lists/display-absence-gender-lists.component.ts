@@ -14,8 +14,8 @@ export class DisplayAbsenceGenderListsComponent {
     this.data.absents;
   }
 
-  deleteAbsent() {
-
+  deleteAbsent(i: any) {
+    this.data.absents.splice(i, 1);
   }
 
 }

@@ -3,17 +3,21 @@
     <div>
       <p>Liste des absents</p>
         <ul>
-            <li *ngFor="let absent of data.absents; let i = index">
+          <ng-container *ngFor="let absent of data.absents; let i = index">
+            <li>
               <p>{{absent}}<button (click)="deleteAbsent(i)">X</button></p>
             </li>
+          </ng-container>
         </ul>
     </div>
     <div>
       <p>Liste des absentes</p>
       <ul>
-        <li *ngFor="let absent of data.absents; let i = index">
-          <p>{{absent}}<button (click)="deleteAbsent(i)">X</button></p>
-        </li>
+        <ng-container *ngFor="let absent of data.absents; let i = index">
+          <li>
+            <p>{{absent}}<button (click)="deleteAbsent(i)">X</button></p>
+          </li>
+        </ng-container>
       </ul>
     </div>
   </div>

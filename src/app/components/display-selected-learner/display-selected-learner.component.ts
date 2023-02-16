@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LEARNERS, Learners } from 'src/app/mocks/learners.mocks';
+import { SharedDatasService } from 'src/app/sharedDatas.service';
 
 @Component({
   selector: 'app-display-selected-learner',
@@ -10,6 +11,8 @@ export class DisplaySelectedLearnerComponent {
   // Récupérer le mock des apprenants
   learner!: Learners;
   learners: Learners[] = LEARNERS;
+
+  constructor(public data: SharedDatasService){}
   
   //* Seconde méthode adoptée suite problème pour contourner larépétition du RandomNumber dans méthode 1 (à la suite)
   // Valeur par défaut du switch
@@ -35,6 +38,8 @@ export class DisplaySelectedLearnerComponent {
       ];
     }
     console.log(this.switchCases);
+    console.log(this.data.indexAbsents)
+    console.log(this.data.absents)
   }
 
   // Lecture des swithCases suivant l'ordre du tableau switchCases shufflé

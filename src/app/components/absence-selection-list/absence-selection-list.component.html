@@ -3,8 +3,10 @@
         <p>Ajouter un.e absent.e</p>
         <select name="apprenants" id="apprenants" (change)="onChangeEvent($event)">
             <option value="">Sélectionner une personne</option>
-                <option value="{{learners.firstname}}" *ngFor="let learners of learnerMock; let i = index" (change)="onChangeIndex(i)">{{learners.firstname}}</option>
+            <ng-container *ngFor="let learners of learnerMock">
+                <option value="{{learners.firstname}}" (change)="onChangeIndex(learners.id)">{{learners.firstname}}</option>
+            </ng-container>
         </select>
-        <button type="submit" (click)="onSubmit()">Ajouter</button>
+        <button type="button" (click)="onSubmit()">Ajouter</button>
     </form>
 </section>

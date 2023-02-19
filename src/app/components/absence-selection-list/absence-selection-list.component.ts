@@ -26,17 +26,35 @@ export class AbsenceSelectionListComponent {
   }
 
    // Méthode de récupération de l'index (change)
-  onChangeIndex(i: number) {
+  onChangeIndex(index: any) {
     // Je modifie ma propriété "selectionList"
-    this.selectionIndex = i;
-    //! Je récupère undefined ... POURQUOI ??????
+    this.selectionIndex = index;
+
+    //!!!!! Je récupère undefined ... POURQUOI ????? => Je n'arrive pas à récupérer l'id
+    //!!!!! Si j'arrive à récupèrer l'ID => Je l'envoie dans le sharedDatasService 
+    //!!!!! Je récupère ensuite cet index dans le display-selected-learner.ts
+    //!!!!!  et de là je peux rapprocher l'index aux ngSwitchCases numérotés de 1 à 10
+    //!!!!! Créer un [hidden] lié à un booléan sur chaque ngSwitchCase à false
+    //!!!!! Si ID = ngSwitchCase alors je passe le [hidden] = true
+    
+    // console.log(this.selectionIndex);
     console.log(this.selectionIndex);
   }
 
   // Au submit, j'envoie la sélection dans le service "sharedDatas" et je réinitialise ensuite la propriété
   onSubmit() {
     // Je communique le firstname au service
-    this.data.absents.push(this.selectionAbsent);
+    if(this.data.absents.includes(this.selectionAbsent)){
+
+      //!!!!! Ma liste reste la même => MAIS NE FONCTIONNE PAS PARFAITEMENT !!!!!
+
+      this.data.absents == this.data.absents;
+      // J'affiche une alerte
+      alert('Apprenant déjà sélectionné comme absent.e')
+    } else {
+      // Sinon je push l'absent dans le sharedDatas.service 
+      this.data.absents.push(this.selectionAbsent);
+    }
     // Je transmets l'index au service
     this.data.indexAbsents.push(this.selectionIndex);
     // Réinitilaisations

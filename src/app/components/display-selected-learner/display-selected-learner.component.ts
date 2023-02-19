@@ -25,24 +25,29 @@ export class DisplaySelectedLearnerComponent {
 
   // Je lance l'initialisation pour le mélange du tableau au lancement de l'app
   ngOnInit() {
+
+        //!!!! Essai de récupération des datas provenant du sharedDatas.service => Je ne récupère que les absents, pas les index
+        console.log(this.data.indexAbsents)
+        console.log(this.data.absents)
+
     this.displayShuffle();
   }
 
   // Une méthode de mélange des éléments du tableau (shuffle)
   displayShuffle() {
     for (let i = this.switchCases.length - 1; i > 0; i--) {
+      // Pour chaque élément de mon tableau, je génère un chiffre aléatoire entre 0 et 17
       const j = Math.floor(Math.random() * (i + 1));
+      console.log(j);
       [this.switchCases[i], this.switchCases[j]] = [
         this.switchCases[j],
         this.switchCases[i],
       ];
     }
     console.log(this.switchCases);
-    console.log(this.data.indexAbsents)
-    console.log(this.data.absents)
   }
 
-  // Lecture des swithCases suivant l'ordre du tableau switchCases shufflé
+  // Lecture des swithCases suivant l'ordre du tableau DES switchCases M2LANG2
   displayByNumber() {
     this.index++;
     this.index %= this.switchCases.length;
